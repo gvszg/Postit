@@ -1,4 +1,8 @@
 PostitTemplate::Application.routes.draw do
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+  
   root to: 'posts#index'
 
   resources :posts, except: :destroy do
