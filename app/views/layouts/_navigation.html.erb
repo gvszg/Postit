@@ -32,8 +32,8 @@
     <%= link_to 'New Post', new_post_path, class: 'btn btn-success btn-small' %>
   </div>
   <div class='btn-group nav_item'>
-    <%= link_to('', class: 'btn btn-warning btn-small dropdown-toggle', 'data-toggle' => 'dropdown') do %>
-      <%= current_user.username %><span class='caret'></span>
+    <%= link_to('', class: 'btn dropdown-toggle', 'data-toggle' => 'dropdown') do %>
+      Hi! , <%= current_user.username %> <span class='caret'></span>
     <% end %>
     <ul class='dropdown-menu'>
       <li>
@@ -56,7 +56,7 @@
       </li>
     </ul>
   </div>
-<% else %>
+<% else # logged out %>
   <div class='nav_item'>
     <%= link_to 'Register', register_path, class: 'btn btn-success btn-small' %>
   </div>
