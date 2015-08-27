@@ -40,7 +40,7 @@ class PostsController < ApplicationController
 
   def vote
     Vote.create(voteable: @post, creator: current_user, vote: params[:vote])
-    flash[:notice] = "#{current_user.username}'s vote was counted!"
+    flash[:notice] = "Your vote was counted!"
     redirect_to :back
   end
 
